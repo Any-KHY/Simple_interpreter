@@ -4,17 +4,6 @@
 
 This project is an interpreter for a simple imperative string-processing language, developed as part of the 159.341 course assignment at Massey University. The interpreter processes and executes commands related to string manipulation.
 
-## Author
-
-- **Name:** KWOK Hoi Yi
-- **Student ID:** 22000531
-
-## Course Details
-
-- **Course:** 159.341
-- **Assignment:** 1
-- **Semester:** 1, 2024
-
 ## Features
 
 This interpreter supports the following commands:
@@ -50,7 +39,7 @@ The interpreter includes robust error handling for various syntax and runtime er
 
 ## Example
 
-```Sample
+```"Sample"
 ＿ﾉ乙(ཀﾝ､)ノ >> set myVar "Hello, World!";
 ＿ﾉ乙(ཀﾝ､)ノ >> print myVar;
 Hello, World!
@@ -72,19 +61,6 @@ Word count is: 5
 ＿ﾉ乙(ཀﾝ､)ノ >> print myVar;
 you? are How World! Hello,
 ＿ﾉ乙(ཀﾝ､)ノ >> exit;
-```
-
-## Dependencies
-
-- Python 3.x
-- `re` module (part of the Python Standard Library)
-
-## Running the Code
-
-To run the interpreter, execute the following command in your terminal:
-
-```sh
-python interpreter.py
 ```
 
 ## Contact
