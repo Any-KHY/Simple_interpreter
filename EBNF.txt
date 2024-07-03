@@ -1,0 +1,60 @@
+EBNF:
+program     := { statement }
+statement   := append id expression end
+            | list end
+            | exit end
+            | print expression end
+            | printlength expression end
+            | printwords expression end
+            | printwordcount expression end
+            | set id expression end
+            | reverse id end
+expression  := value { plus value }
+value       := id | constant | literal
+
+Commands:
+
+Command                 Parameters                  Behaviour
+-------------------------------------------------------------------------------------------------------------------
+append                  id expression               Evaluate the expression and append it to the variable contents.
+list                    NA                          List all variables and their contents.
+exit                    NA                          Exit the interpreter
+print                   expression                  Evaluate and print the expression
+printlength             expression                  Evaluate the expression and print its length (characters)
+printwords              expression                  Evaluate the expression and print the individual words
+printwordcount          expression                  Evaluate the expression and print the number of words
+set                     id expression               Set the contents of the variable to the expression
+reverse                 id                          Reverse the order of the words in the contents of the variable.
+
+
+Sample:
+
+set one "The cat";
+set two "sat on the mat";
+set sentence one + SPACE + two;
+append sentence " by itself.";
+print sentence;
+The cat sat on the mat by itself.
+printwordcount sentence;
+Wordcount is: 8
+printwords sentence;
+Words are:
+The
+cat
+sat
+on
+the
+mat
+by
+itself
+printlength sentence;
+Length is: 33
+list;
+Identifier list (3):
+one: "The cat"
+two: "sat on the mat"
+sentence: "The cat sat on the mat by itself."
+reverse one;
+print one;
+cat The
+exit;
